@@ -26,6 +26,22 @@
   <remove-project name="LineageOS/android_packages_overlays_Lineage" />
   <project path="packages/overlays/Lineage" name="android_packages_overlays_Lineage" remote="fundamentalos" revision="16" />
 
+  <!--
+    mimalloc as a selectable bionic allocator, gated on MALLOC_USE_MIMALLOC.
+    Default stays Scudo (MTE); build with MALLOC_USE_MIMALLOC=true to opt in.
+      - external/mimalloc : vendored mimalloc v2.2.4 + Android.bp + purge tuning
+      - bionic            : mimalloc allocator wrapper (malloc_use_mimalloc)
+      - build/soong       : Malloc_use_mimalloc product variable
+      - build/make        : MALLOC_USE_MIMALLOC -> Malloc_use_mimalloc bridge
+  -->
+  <remove-project name="LineageOS/android_bionic" />
+  <project path="bionic" name="android_bionic" remote="fundamentalos" revision="16" groups="pdk" />
+  <remove-project name="LineageOS/android_build_soong" />
+  <project path="build/soong" name="android_build_soong" remote="fundamentalos" revision="16" groups="pdk,tradefed,sysui-studio" />
+  <remove-project name="LineageOS/android_build" />
+  <project path="build/make" name="android_build" remote="fundamentalos" revision="16" groups="pdk,sysui-studio" />
+  <project path="external/mimalloc" name="android_external_mimalloc" remote="fundamentalos" revision="16" />
+
   <!-- private release signing keys (repo is private; sync needs the SSH key) -->
   <project path="vendor/lineage-priv" name="vendor_lineage-priv" remote="fundaagent" revision="16" />
 </manifest>
