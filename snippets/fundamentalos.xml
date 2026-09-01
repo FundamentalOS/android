@@ -29,7 +29,7 @@
   <!--
     mimalloc as a selectable bionic allocator, gated on MALLOC_USE_MIMALLOC.
     Default stays Scudo (MTE); build with MALLOC_USE_MIMALLOC=true to opt in.
-      - external/mimalloc : vendored mimalloc v2.2.4 + Android.bp + purge tuning
+      - external/mimalloc : vendored mimalloc v2.5.0 + Android.bp + purge tuning + heap zero-init
       - bionic            : mimalloc allocator wrapper (malloc_use_mimalloc)
       - build/soong       : Malloc_use_mimalloc product variable
       - build/make        : MALLOC_USE_MIMALLOC -> Malloc_use_mimalloc bridge
