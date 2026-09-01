@@ -59,7 +59,7 @@
   <project path="vendor/gapps" name="android_vendor_gapps" remote="fundamentalos" revision="16" />
 
   <!-- Google Chrome (Trichrome), replaces Jelly -->
-  <project path="vendor/gapps/chrome" name="android_vendor_chrome" remote="fundamentalos" revision="16" />
+  <project path="vendor/gapps/chrome" name="android_vendor_gapps_chrome" remote="fundamentalos" revision="16" />
 
   <project path="vendor/lineage-priv" name="vendor_lineage-priv" remote="fundaagent" revision="16" />
 </manifest>
