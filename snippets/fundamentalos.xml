@@ -43,5 +43,9 @@
   <project path="external/mimalloc" name="android_external_mimalloc" remote="fundamentalos" revision="16" />
 
   <!-- private release signing keys (repo is private; sync needs the SSH key) -->
+  <!-- FundamentalOS vendor tree (branded standalone fork of LineageOS vendor), mounted at vendor/fundamental -->
+  <remove-project name="LineageOS/android_vendor_lineage" />
+  <project path="vendor/fundamental" name="android_vendor_fundamental" remote="fundamentalos" revision="16" />
+
   <project path="vendor/lineage-priv" name="vendor_lineage-priv" remote="fundaagent" revision="16" />
 </manifest>
