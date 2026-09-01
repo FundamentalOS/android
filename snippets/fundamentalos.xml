@@ -61,5 +61,8 @@
   <!-- Google Chrome (Trichrome), replaces Jelly -->
   <project path="vendor/gapps/chrome" name="android_vendor_gapps_chrome" remote="fundamentalos" revision="16" />
 
+  <!-- Google Camera (GCam) for caimito, replaces Aperture; device-bound -->
+  <project path="vendor/google/caimito_gcam" name="android_vendor_google_caimito_gcam" remote="fundamentalos" revision="16" />
+
   <project path="vendor/lineage-priv" name="vendor_lineage-priv" remote="fundaagent" revision="16" />
 </manifest>
