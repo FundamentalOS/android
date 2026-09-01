@@ -68,4 +68,12 @@
 
 
   <project path="vendor/lineage-priv" name="vendor_lineage-priv" remote="fundaagent" />
+
+  <!-- CJK: notocjk-enhanced Noto CJK VF (chws + full wght 100-900 + emoji cmap) + USE_TYPO_METRICS -->
+  <remove-project name="platform/external/noto-fonts" />
+  <project path="external/noto-fonts" name="android_external_noto-fonts" remote="fundamentalos" revision="16" groups="pdk" />
+
+  <!-- frameworks/base: fonts.xml CJK weight rewire (+ future framework customizations) -->
+  <remove-project name="LineageOS/android_frameworks_base" />
+  <project path="frameworks/base" name="android_frameworks_base" remote="fundamentalos" revision="16" groups="pdk-cw-fs,pdk-fs,sysui-studio" />
 </manifest>
