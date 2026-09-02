@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
   <!--
-    FundamentalOS overrides. Included from default.xml AFTER snippets/lineage.xml
-    so that <remove-project> can drop both the AOSP entries (default.xml) and the
-    LineageOS entries (lineage.xml) before our forks are added. lineage.xml itself
-    is left untouched.
+    FundamentalOS overrides: only <remote>/<project> additions. Included from
+    default.xml AFTER snippets/lineage.xml and snippets/remove.xml, so the forks
+    below re-add (on the fundamentalos remote) the AOSP/LineageOS projects that
+    remove.xml has already dropped. All <remove-project> entries live in
+    snippets/remove.xml; lineage.xml itself is left untouched.
   -->
   <!-- These remotes carry revision="16": every FundamentalOS fork tracks the
        16 branch by default, so the projects below omit a per-project revision
@@ -15,25 +16,20 @@
   <remote name="fundaagent" fetch="git@github.com:FundaAgent/" revision="16" />
 
   <!-- libz built from zlib-ng (compat); +~30-53% inflate on arm64 -->
-  <remove-project name="platform/external/zlib" />
   <project path="external/zlib" name="android_external_zlib" remote="fundamentalos" groups="pdk" />
   <project path="external/zlib-ng" name="android_external_zlib-ng" remote="fundamentalos" />
 
   <!-- ABI reference dumps regenerated for the zlib-ng libz -->
-  <remove-project name="platform/prebuilts/abi-dumps/platform" />
   <project path="prebuilts/abi-dumps/platform" name="android_prebuilts_abi-dumps_platform" remote="fundamentalos" groups="pdk-cw-fs,pdk-fs" clone-depth="1" />
 
   <!-- allowed_deps: libz_ng_headers -->
-  <remove-project name="LineageOS/android_packages_modules_common" />
   <project path="packages/modules/common" name="android_packages_modules_common" remote="fundamentalos" groups="pdk-cw-fs,pdk-fs" />
 
   <!-- ConnectivityService: install the firewall UID allowlist when a network connects
        (LineageOS transport firewall left never-validating networks unreachable for apps) -->
-  <remove-project name="LineageOS/android_packages_modules_Connectivity" />
   <project path="packages/modules/Connectivity" name="android_packages_modules_Connectivity" remote="fundamentalos" groups="pdk-cw-fs,pdk-fs" />
 
   <!-- lock screen clock font (google-sans-flex-clock) -->
-  <remove-project name="LineageOS/android_packages_overlays_Lineage" />
   <project path="packages/overlays/Lineage" name="android_packages_overlays_Lineage" remote="fundamentalos" />
 
   <!--
@@ -44,26 +40,23 @@
       - build/soong       : Malloc_use_mimalloc product variable
       - build/make        : MALLOC_USE_MIMALLOC -> Malloc_use_mimalloc bridge
   -->
-  <remove-project name="LineageOS/android_bionic" />
   <project path="bionic" name="android_bionic" remote="fundamentalos" groups="pdk" />
-  <remove-project name="LineageOS/android_build_soong" />
   <project path="build/soong" name="android_build_soong" remote="fundamentalos" groups="pdk,tradefed,sysui-studio" />
-  <remove-project name="LineageOS/android_build" />
   <project path="build/make" name="android_build" remote="fundamentalos" groups="pdk,sysui-studio" />
   <project path="external/mimalloc" name="android_external_mimalloc" remote="fundamentalos" />
 
   <!-- private release signing keys (repo is private; sync needs the SSH key) -->
   <!-- FundamentalOS vendor tree (branded standalone fork of LineageOS vendor), mounted at vendor/fundamental -->
-  <remove-project name="LineageOS/android_vendor_lineage" />
   <project path="vendor/fundamental" name="android_vendor_fundamental" remote="fundamentalos" />
 
   <!-- lineage-sdk: user-visible OS-name strings rebranded to FundamentalOS -->
-  <remove-project name="LineageOS/android_lineage-sdk" />
   <project path="lineage-sdk" name="android_lineage-sdk" remote="fundamentalos" />
 
   <!-- Settings: version-preference dedup + FundamentalOS branding -->
-  <remove-project name="LineageOS/android_packages_apps_Settings" />
   <project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="fundamentalos" groups="pdk-fs,pdk-cw-tvc,sysui-studio" />
+
+  <!-- Trebuchet: default 4x5 grid (config_default_grid_name) + minimal FundamentalOS workspace -->
+  <project path="packages/apps/Launcher3" name="android_packages_apps_Launcher3" remote="fundamentalos" groups="pdk-fs,sysui-studio,pdk-cw-tvc" />
 
   <!-- MindTheGapps (minimal GMS), tracked in-org -->
   <project path="vendor/gapps" name="android_vendor_gapps" remote="fundamentalos" />
@@ -75,24 +68,17 @@
   <project path="vendor/lineage-priv" name="vendor_lineage-priv" remote="fundaagent" />
 
   <!-- CJK: notocjk-enhanced Noto CJK VF (chws + full wght 100-900 + emoji cmap) + USE_TYPO_METRICS -->
-  <remove-project name="platform/external/noto-fonts" />
   <project path="external/noto-fonts" name="android_external_noto-fonts" remote="fundamentalos" revision="16" groups="pdk" />
 
   <!-- frameworks/base: fonts.xml CJK weight rewire (+ future framework customizations) -->
-  <remove-project name="LineageOS/android_frameworks_base" />
   <project path="frameworks/base" name="android_frameworks_base" remote="fundamentalos" revision="16" groups="pdk-cw-fs,pdk-fs,sysui-studio" />
 
   <!-- frameworks/opt/telephony: keep PS attach allowed on both SIM slots (Shannon RIL DSDS fix, PhoneSwitcher) -->
-  <remove-project name="LineageOS/android_frameworks_opt_telephony" />
   <project path="frameworks/opt/telephony" name="android_frameworks_opt_telephony" remote="fundamentalos" revision="16" groups="pdk,sysui-studio" />
 
   <!-- perf/power audit forks: native / av / system_core / art (see fwb-perf-power-audit) -->
-  <remove-project name="LineageOS/android_frameworks_native" />
   <project path="frameworks/native" name="android_frameworks_native" remote="fundamentalos" revision="16" groups="pdk" />
-  <remove-project name="LineageOS/android_frameworks_av" />
   <project path="frameworks/av" name="android_frameworks_av" remote="fundamentalos" revision="16" groups="pdk,sysui-studio" />
-  <remove-project name="LineageOS/android_system_core" />
   <project path="system/core" name="android_system_core" remote="fundamentalos" revision="16" groups="pdk" />
-  <remove-project name="platform/art" />
   <project path="art" name="android_art" remote="fundamentalos" revision="16" groups="pdk" />
 </manifest>

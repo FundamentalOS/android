@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <!--
+    FundamentalOS project removals, split out of snippets/fundamentalos.xml so that
+    the overrides file carries only <remote>/<project> additions. Included from
+    default.xml AFTER snippets/lineage.xml and BEFORE snippets/fundamentalos.xml, so
+    every AOSP (default.xml) and LineageOS (lineage.xml) project we fork is dropped
+    before fundamentalos.xml re-adds it on the fundamentalos remote. lineage.xml
+    itself is left untouched.
+  -->
+  <remove-project name="platform/external/zlib" />
+  <remove-project name="platform/prebuilts/abi-dumps/platform" />
+  <remove-project name="LineageOS/android_packages_modules_common" />
+  <remove-project name="LineageOS/android_packages_modules_Connectivity" />
+  <remove-project name="LineageOS/android_packages_overlays_Lineage" />
+  <remove-project name="LineageOS/android_bionic" />
+  <remove-project name="LineageOS/android_build_soong" />
+  <remove-project name="LineageOS/android_build" />
+  <remove-project name="LineageOS/android_vendor_lineage" />
+  <remove-project name="LineageOS/android_lineage-sdk" />
+  <remove-project name="LineageOS/android_packages_apps_Settings" />
+  <remove-project name="LineageOS/android_packages_apps_Launcher3" />
+  <remove-project name="platform/external/noto-fonts" />
+  <remove-project name="LineageOS/android_frameworks_base" />
+  <remove-project name="LineageOS/android_frameworks_opt_telephony" />
+  <remove-project name="LineageOS/android_frameworks_native" />
+  <remove-project name="LineageOS/android_frameworks_av" />
+  <remove-project name="LineageOS/android_system_core" />
+  <remove-project name="platform/art" />
+</manifest>
