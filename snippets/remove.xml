@@ -28,4 +28,5 @@
   <remove-project name="LineageOS/android_frameworks_av" />
   <remove-project name="LineageOS/android_system_core" />
   <remove-project name="platform/art" />
+  <remove-project name="platform/system/memory/libmeminfo" />
 </manifest>

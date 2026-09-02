@@ -45,6 +45,11 @@
   <project path="build/make" name="android_build" remote="fundamentalos" groups="pdk,sysui-studio" />
   <project path="external/mimalloc" name="android_external_mimalloc" remote="fundamentalos" />
 
+  <!-- libmeminfo: attribute [anon:mimalloc] heap to Native Heap in
+       Debug.getMemoryInfo() (dumpsys meminfo / procstats / Settings);
+       otherwise mimalloc arenas land in Unknown -> inflated "Android OS" -->
+  <project path="system/memory/libmeminfo" name="android_system_memory_libmeminfo" remote="fundamentalos" groups="pdk" />
+
   <!-- private release signing keys (repo is private; sync needs the SSH key) -->
   <!-- FundamentalOS vendor tree (branded standalone fork of LineageOS vendor), mounted at vendor/fundamental -->
   <project path="vendor/fundamental" name="android_vendor_fundamental" remote="fundamentalos" />
