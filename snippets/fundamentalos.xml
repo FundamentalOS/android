@@ -75,7 +75,7 @@
   <!-- Pixel lockscreen clock plugins (SystemUIClocks-*): presigned prebuilts from stock
        BP4A. Inherited ROM-wide via vendor/fundamental; loaded on user builds through
        config_pluginAllowlist (vendor/fundamental/overlay/common) -->
-  <project path="vendor/google/clocks" name="android_vendor_google_clocks" remote="fundamentalos" />
+  <project path="vendor/fundamental/clocks" name="android_vendor_fundamental_clocks" remote="fundamentalos" />
 
 
   <project path="vendor/lineage-priv" name="vendor_lineage-priv" remote="fundaagent" />
