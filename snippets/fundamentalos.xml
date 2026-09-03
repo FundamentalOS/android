@@ -41,8 +41,18 @@
       - build/make        : MALLOC_USE_MIMALLOC -> Malloc_use_mimalloc bridge
   -->
   <project path="bionic" name="android_bionic" remote="fundamentalos" groups="pdk" />
-  <project path="build/soong" name="android_build_soong" remote="fundamentalos" groups="pdk,tradefed,sysui-studio" />
-  <project path="build/make" name="android_build" remote="fundamentalos" groups="pdk,sysui-studio" />
+  <project path="build/soong" name="android_build_soong" remote="fundamentalos" groups="pdk,tradefed,sysui-studio" >
+    <linkfile src="root.bp" dest="Android.bp" />
+    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+  </project>
+  <project path="build/make" name="android_build" remote="fundamentalos" groups="pdk,sysui-studio" >
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+  </project>
   <project path="external/mimalloc" name="android_external_mimalloc" remote="fundamentalos" />
 
   <!-- libmeminfo: attribute [anon:mimalloc] heap to Native Heap in
