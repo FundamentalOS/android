@@ -61,8 +61,10 @@
   <project path="system/memory/libmeminfo" name="android_system_memory_libmeminfo" remote="fundamentalos" groups="pdk" />
 
   <!-- private release signing keys (repo is private; sync needs the SSH key) -->
-  <!-- FundamentalOS vendor tree (branded standalone fork of LineageOS vendor), mounted at vendor/fundamental -->
-  <project path="vendor/fundamental" name="android_vendor_fundamental" remote="fundamentalos" />
+  <!-- FundamentalOS vendor namespace at vendor/fundamental: common/ (branded fork of LineageOS vendor) + framework/ (own SystemUI/app source) + clocks/ -->
+  <project path="vendor/fundamental/common" name="android_vendor_fundamental_common" remote="fundamentalos" />
+  <!-- FundamentalOS framework tree: SystemUIFundamental (overrides SystemUI) + ColumbusService (Quick Tap) -->
+  <project path="vendor/fundamental/framework" name="android_vendor_fundamental_framework" remote="fundamentalos" />
 
   <!-- lineage-sdk: user-visible OS-name strings rebranded to FundamentalOS -->
   <project path="lineage-sdk" name="android_lineage-sdk" remote="fundamentalos" />
@@ -104,4 +106,7 @@
   <project path="frameworks/av" name="android_frameworks_av" remote="fundamentalos" revision="16" groups="pdk,sysui-studio" />
   <project path="system/core" name="android_system_core" remote="fundamentalos" revision="16" groups="pdk" />
   <project path="art" name="android_art" remote="fundamentalos" revision="16" groups="pdk" />
+
+  <!-- keystore2: per-app keybox attestation for selective Play Integrity DEVICE (plan B) -->
+  <project path="system/security" name="android_system_security" remote="fundamentalos" groups="pdk" />
 </manifest>
