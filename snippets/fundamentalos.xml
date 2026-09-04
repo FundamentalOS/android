@@ -63,8 +63,9 @@
   <!-- private release signing keys (repo is private; sync needs the SSH key) -->
   <!-- FundamentalOS vendor namespace at vendor/fundamental: common/ (branded fork of LineageOS vendor) + framework/ (own SystemUI/app source) + clocks/ -->
   <project path="vendor/fundamental/common" name="android_vendor_fundamental_common" remote="fundamentalos" />
-  <!-- FundamentalOS framework tree: SystemUIFundamental (overrides SystemUI) + ColumbusService (Quick Tap) -->
-  <project path="vendor/fundamental/framework" name="android_vendor_fundamental_framework" remote="fundamentalos" />
+  <!-- FundamentalOS apps (AOSP packages/apps layout) -->
+  <project path="packages/apps/SystemUIFundamental" name="android_packages_apps_SystemUIFundamental" remote="fundamentalos" />
+  <project path="packages/apps/ColumbusService" name="android_packages_apps_ColumbusService" remote="fundamentalos" />
 
   <!-- lineage-sdk: user-visible OS-name strings rebranded to FundamentalOS -->
   <project path="lineage-sdk" name="android_lineage-sdk" remote="fundamentalos" />
