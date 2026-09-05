@@ -55,6 +55,10 @@
   </project>
   <project path="external/mimalloc" name="android_external_mimalloc" remote="fundamentalos" />
 
+  <!-- simdutf: SIMD UTF-8<->UTF-16 transcoding; accelerates libutils Unicode
+       conversion on binder Parcel + androidfw resource decode paths -->
+  <project path="external/simdutf" name="android_external_simdutf" remote="fundamentalos" />
+
   <!-- libmeminfo: attribute [anon:mimalloc] heap to Native Heap in
        Debug.getMemoryInfo() (dumpsys meminfo / procstats / Settings);
        otherwise mimalloc arenas land in Unknown -> inflated "Android OS" -->
