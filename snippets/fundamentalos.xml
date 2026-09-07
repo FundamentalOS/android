@@ -118,4 +118,8 @@
 
   <!-- keystore2: per-app keybox attestation for selective Play Integrity DEVICE (plan B) -->
   <project path="system/security" name="android_system_security" remote="fundamentalos" groups="pdk" />
+  <project path="device/fundamental/sepolicy" name="android_device_fundamental_sepolicy" remote="fundamentalos" />
+
+  <!-- FundamentalForge: attested keybox fetch service; PRODUCT_PACKAGES via vendor/fundamental/common -->
+  <project path="packages/apps/FundamentalForge" name="android_packages_apps_FundamentalForge" remote="fundamentalos" />
 </manifest>

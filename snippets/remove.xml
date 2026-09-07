@@ -32,4 +32,5 @@
   <remove-project name="LineageOS/android_system_security" />
   <remove-project name="platform/art" />
   <remove-project name="platform/system/memory/libmeminfo" />
+  <remove-project name="LineageOS/android_device_lineage_sepolicy" />
 </manifest>
