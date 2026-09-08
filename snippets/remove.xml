@@ -17,4 +17,9 @@
   <remove-project name="platform/external/zlib" />
   <remove-project name="platform/external/noto-fonts" />
   <remove-project name="platform/system/memory/libmeminfo" />
+  <remove-project name="platform/frameworks/base" />
+  <remove-project name="platform/frameworks/opt/telephony" />
+  <remove-project name="platform/packages/apps/Settings" />
+  <remove-project name="platform/packages/apps/Launcher3" />
+  <remove-project name="platform/packages/apps/ThemePicker" />
 </manifest>

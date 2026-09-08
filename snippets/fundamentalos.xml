@@ -28,6 +28,15 @@
     <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
   </project>
 
+  <!-- Framework and app forks: frameworks/base + Settings on AOSP android-17.0.0_r1,
+       telephony / Launcher3 (Trebuchet) / ThemePicker on LineageOS lineage-24.0, each
+       plus the FundamentalOS commits -->
+  <project path="frameworks/base" name="android_frameworks_base" remote="fundamentalos" groups="pdk-cw-fs,pdk-fs,sysui-studio" />
+  <project path="frameworks/opt/telephony" name="android_frameworks_opt_telephony" remote="fundamentalos" groups="pdk,sysui-studio" />
+  <project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="fundamentalos" groups="pdk-fs,pdk-cw-tvc,sysui-studio" />
+  <project path="packages/apps/Launcher3" name="android_packages_apps_Launcher3" remote="fundamentalos" groups="pdk-fs,sysui-studio,pdk-cw-tvc" />
+  <project path="packages/apps/ThemePicker" name="android_packages_apps_ThemePicker" remote="fundamentalos" groups="pdk-fs,sysui-studio" />
+
   <!-- Native platform forks: AOSP android-17.0.0_r1 + FundamentalOS commits
        (mimalloc allocator, simdutf UTF transcoding, Tensor G4 cpu variants,
        SurfaceFlinger/audio/camera micro-optimizations, zlib-ng libz, CJK fonts) -->
