@@ -40,6 +40,10 @@
   <!-- keystore2: ROM-native Play Integrity attestation forge (Settings-managed) -->
   <project path="system/security" name="android_system_security" remote="fundamentalos" groups="pdk" />
 
+  <!-- Rust crates: AOSP android-17.0.0_r1 + visibility for the keystore2 forge -->
+  <project path="external/rust/crates/openssl" name="android_external_rust_crates_openssl" remote="fundamentalos" groups="pdk" />
+  <project path="external/rust/android-crates-io" name="android_external_rust_android-crates-io" remote="fundamentalos" groups="pdk" />
+
   <!-- Native platform forks: AOSP android-17.0.0_r1 + FundamentalOS commits
        (mimalloc allocator, simdutf UTF transcoding, Tensor G4 cpu variants,
        SurfaceFlinger/audio/camera micro-optimizations, zlib-ng libz, CJK fonts) -->
