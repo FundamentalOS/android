@@ -82,6 +82,7 @@
 
   <!-- Blob / kernel extraction tooling (LineageOS imports) -->
   <project path="tools/extract-utils" name="android_tools_extract-utils" remote="fundamentalos" />
+  <project path="lineage/scripts" name="android_lineage_scripts" remote="fundamentalos" revision="17" />
   <project path="prebuilts/tools-lineage" name="android_prebuilts_tools-lineage" remote="fundamentalos" clone-depth="1" />
   <project path="prebuilts/extract-tools" name="android_prebuilts_extract-tools" remote="fundamentalos" clone-depth="1" />
 
