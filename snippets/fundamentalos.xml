@@ -37,6 +37,9 @@
   <project path="packages/apps/Launcher3" name="android_packages_apps_Launcher3" remote="fundamentalos" groups="pdk-fs,sysui-studio,pdk-cw-tvc" />
   <project path="packages/apps/ThemePicker" name="android_packages_apps_ThemePicker" remote="fundamentalos" groups="pdk-fs,sysui-studio" />
 
+  <!-- keystore2: ROM-native Play Integrity attestation forge (Settings-managed) -->
+  <project path="system/security" name="android_system_security" remote="fundamentalos" groups="pdk" />
+
   <!-- Native platform forks: AOSP android-17.0.0_r1 + FundamentalOS commits
        (mimalloc allocator, simdutf UTF transcoding, Tensor G4 cpu variants,
        SurfaceFlinger/audio/camera micro-optimizations, zlib-ng libz, CJK fonts) -->
