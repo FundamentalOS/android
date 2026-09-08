@@ -28,6 +28,21 @@
     <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
   </project>
 
+  <!-- Native platform forks: AOSP android-17.0.0_r1 + FundamentalOS commits
+       (mimalloc allocator, simdutf UTF transcoding, Tensor G4 cpu variants,
+       SurfaceFlinger/audio/camera micro-optimizations, zlib-ng libz, CJK fonts) -->
+  <project path="bionic" name="android_bionic" remote="fundamentalos" groups="pdk" />
+  <project path="system/core" name="android_system_core" remote="fundamentalos" groups="pdk" />
+  <project path="frameworks/av" name="android_frameworks_av" remote="fundamentalos" groups="pdk,sysui-studio" />
+  <project path="frameworks/native" name="android_frameworks_native" remote="fundamentalos" groups="pdk" />
+  <project path="art" name="android_art" remote="fundamentalos" groups="pdk" />
+  <project path="external/zlib" name="android_external_zlib" remote="fundamentalos" groups="pdk" />
+  <project path="external/zlib-ng" name="android_external_zlib-ng" remote="fundamentalos" />
+  <project path="external/mimalloc" name="android_external_mimalloc" remote="fundamentalos" />
+  <project path="external/simdutf" name="android_external_simdutf" remote="fundamentalos" />
+  <project path="external/noto-fonts" name="android_external_noto-fonts" remote="fundamentalos" groups="pdk" />
+  <project path="system/memory/libmeminfo" name="android_system_memory_libmeminfo" remote="fundamentalos" groups="pdk" />
+
   <!-- Pixel HAL / sepolicy that left AOSP with Android 16 (LineageOS lineage-24.0 imports) -->
   <project path="hardware/google/pixel" name="android_hardware_google_pixel" remote="fundamentalos" />
   <project path="hardware/google/pixel-sepolicy" name="android_hardware_google_pixel-sepolicy" remote="fundamentalos" />
