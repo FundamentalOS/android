@@ -93,6 +93,7 @@
   <project path="vendor/lineage-priv" name="vendor_lineage-priv" remote="fundaagent" />
 
   <!-- FundamentalOS apps -->
+  <project path="packages/apps/FundamentalSetupWizard" name="android_packages_apps_FundamentalSetupWizard" remote="fundamentalos" />
   <project path="packages/apps/SystemUIFundamental" name="android_packages_apps_SystemUIFundamental" remote="fundamentalos" />
   <project path="packages/apps/SystemUIClocks" name="android_packages_apps_SystemUIClocks" remote="fundamentalos" />
   <project path="packages/apps/ColumbusService" name="android_packages_apps_ColumbusService" remote="fundamentalos" />
