@@ -102,6 +102,10 @@
 
   <!-- Apps carried over from LineageOS, renamed to com.fundamentalos.* -->
   <project path="packages/apps/Etar" name="android_packages_apps_Etar" remote="fundamentalos" />
+  <project path="packages/apps/Dialer" name="android_packages_apps_Dialer" remote="fundamentalos" />
+  <project path="packages/apps/Messaging" name="android_packages_apps_Messaging" remote="fundamentalos" />
+  <project path="packages/apps/DeskClock" name="android_packages_apps_DeskClock" remote="fundamentalos" />
+  <project path="packages/apps/Contacts" name="android_packages_apps_Contacts" remote="fundamentalos" />
   <project path="packages/apps/Recorder" name="android_packages_apps_Recorder" remote="fundamentalos" />
   <project path="packages/apps/Camelot" name="android_packages_apps_Camelot" remote="fundamentalos" />
   <project path="packages/apps/Backgrounds" name="android_packages_apps_Backgrounds" remote="fundamentalos" />
