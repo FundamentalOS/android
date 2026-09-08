@@ -7,4 +7,6 @@
     BEFORE snippets/fundamentalos.xml. Empty until the platform forks are
     rebased onto android-17.0.0_r1.
   -->
+  <remove-project name="platform/build" />
+  <remove-project name="platform/build/soong" />
 </manifest>
