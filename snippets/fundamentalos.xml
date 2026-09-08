@@ -58,6 +58,7 @@
   <project path="external/nano" name="android_external_nano" remote="fundamentalos" />
   <project path="external/vim" name="android_external_vim" remote="fundamentalos" />
   <project path="external/openssh" name="android_external_openssh" remote="fundamentalos" />
+  <project path="external/json-c" name="android_external_json-c" remote="fundamentalos" />
   <project path="external/libncurses" name="android_external_libncurses" remote="fundamentalos" />
 
   <!-- Blob / kernel extraction tooling (LineageOS imports) -->
