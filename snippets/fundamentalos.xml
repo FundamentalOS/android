@@ -49,6 +49,9 @@
   <project path="tools/extract-utils" name="android_tools_extract-utils" remote="fundamentalos" />
   <project path="prebuilts/extract-tools" name="android_prebuilts_extract-tools" remote="fundamentalos" clone-depth="1" />
 
+  <!-- APN database (LineageOS import) -->
+  <project path="vendor/apn" name="android_vendor_apn" remote="fundamentalos" />
+
   <!-- DeviceConfig flag seeding at boot (configs_base / configs_device / configs_product) -->
   <project path="packages/apps/SimpleDeviceConfig" name="android_packages_apps_SimpleDeviceConfig" remote="fundamentalos" />
 
