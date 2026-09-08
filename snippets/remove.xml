@@ -22,6 +22,8 @@
   <remove-project name="platform/packages/apps/Settings" />
   <remove-project name="platform/packages/apps/Launcher3" />
   <remove-project name="platform/packages/apps/ThemePicker" />
+  <!-- Etar (our fork) replaces the AOSP Calendar; both define CalendarTests -->
+  <remove-project name="platform/packages/apps/Calendar" />
   <remove-project name="platform/system/security" />
   <remove-project name="platform/external/rust/crates/openssl" />
   <remove-project name="platform/external/rust/android-crates-io" />
