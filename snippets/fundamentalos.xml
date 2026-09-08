@@ -63,6 +63,9 @@
   <project path="hardware/google/pixel" name="android_hardware_google_pixel" remote="fundamentalos" />
   <project path="hardware/google/pixel-sepolicy" name="android_hardware_google_pixel-sepolicy" remote="fundamentalos" />
 
+  <!-- System sepolicy: LineageOS lineage-24.0 (AOSP 17 + the Lineage policy patches the device layer and device/fundamental/sepolicy rely on) -->
+  <project path="system/sepolicy" name="android_system_sepolicy" remote="fundamentalos" groups="pdk" />
+
   <!-- Common sepolicy (fork of LineageOS device/lineage/sepolicy) -->
   <project path="device/fundamental/sepolicy" name="android_device_fundamental_sepolicy" remote="fundamentalos" />
 

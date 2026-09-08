@@ -25,4 +25,5 @@
   <remove-project name="platform/system/security" />
   <remove-project name="platform/external/rust/crates/openssl" />
   <remove-project name="platform/external/rust/android-crates-io" />
+  <remove-project name="platform/system/sepolicy" />
 </manifest>
