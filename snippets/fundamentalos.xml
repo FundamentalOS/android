@@ -97,6 +97,7 @@
 
   <!-- vendor -->
   <project path="vendor/fundamental/common" name="android_vendor_fundamental_common" remote="fundamentalos" />
+  <project path="vendor/fundamental/libraries" name="android_vendor_fundamental_libraries" remote="fundamentalos" />
   <project path="vendor/fundamental/bench" name="android_vendor_fundamental_bench" remote="fundamentalos" />
   <project path="vendor/gapps" name="android_vendor_gapps" remote="fundamentalos" />
   <project path="vendor/gapps/chrome" name="android_vendor_gapps_chrome" remote="fundamentalos" />
